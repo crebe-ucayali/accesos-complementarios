@@ -1,0 +1,643 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contacto del CREBE Señor de los Milagros - Ucayali para consultas, sugerencias, coordinación institucional y soporte de la plataforma Tu Zona Inclusiva.">
+  <title>Contacto | Accesos Complementarios</title>
+
+  <style>
+    :root{
+      color-scheme:light;
+      --azul-900:#17324d;
+      --azul-800:#214664;
+      --azul-700:#2f5f7d;
+      --azul-100:#e8f1f5;
+      --verde-700:#1f6a5a;
+      --verde-600:#287c68;
+      --verde-100:#e5f3ef;
+      --arena-50:#faf9f6;
+      --arena-100:#f2efe8;
+      --tinta:#202c35;
+      --texto-suave:#5b6871;
+      --blanco:#ffffff;
+      --borde:#d7e0e5;
+      --sombra:0 16px 40px rgba(23,50,77,.09);
+      --radio:18px;
+      font-family:Inter,Arial,Helvetica,sans-serif;
+    }
+
+    *{box-sizing:border-box}
+
+    html{scroll-behavior:smooth}
+
+    body{
+      min-width:320px;
+      margin:0;
+      color:var(--tinta);
+      background:radial-gradient(circle at 90% 8%,#dcedea 0,transparent 24rem),var(--arena-50);
+      line-height:1.5;
+    }
+
+    a{color:inherit}
+
+    .salto-contenido{
+      position:fixed;
+      top:12px;
+      left:12px;
+      z-index:100;
+      padding:10px 14px;
+      color:#fff;
+      background:var(--azul-900);
+      border-radius:8px;
+      transform:translateY(-160%);
+      transition:transform .2s ease;
+    }
+
+    .salto-contenido:focus{transform:translateY(0)}
+
+    .cabecera{
+      position:relative;
+      overflow:hidden;
+      padding:22px clamp(20px,5vw,72px) 92px;
+      color:#fff;
+      background:linear-gradient(125deg,rgba(23,50,77,.97),rgba(31,106,90,.93)),var(--azul-900);
+    }
+
+    .cabecera:after{
+      position:absolute;
+      right:-80px;
+      bottom:-190px;
+      width:430px;
+      height:430px;
+      border:70px solid rgba(255,255,255,.06);
+      border-radius:50%;
+      content:"";
+    }
+
+    .navegacion{
+      position:relative;
+      z-index:1;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      max-width:1240px;
+      margin:0 auto;
+    }
+
+    .marca{
+      display:inline-flex;
+      gap:11px;
+      align-items:center;
+      color:#fff;
+      font-weight:800;
+      text-decoration:none;
+    }
+
+    .marca-icono{
+      display:grid;
+      width:43px;
+      height:43px;
+      place-items:center;
+      color:var(--azul-900);
+      background:#fff;
+      border-radius:12px;
+      font-size:.7rem;
+      font-weight:900;
+      letter-spacing:.04em;
+      flex-shrink:0;
+    }
+
+    .enlaces-cabecera{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      justify-content:flex-end;
+    }
+
+    .enlace-cabecera{
+      padding:9px 14px;
+      color:#fff;
+      border:1px solid rgba(255,255,255,.45);
+      border-radius:999px;
+      font-size:.94rem;
+      font-weight:700;
+      text-decoration:none;
+      background:rgba(255,255,255,.06);
+    }
+
+    .enlace-cabecera:hover{
+      color:var(--azul-900);
+      background:#fff;
+    }
+
+    .portada{
+      position:relative;
+      z-index:1;
+      max-width:1240px;
+      margin:52px auto 0;
+    }
+
+    .bloque-institucional{
+      display:flex;
+      align-items:center;
+      gap:1.25rem;
+      max-width:780px;
+      margin-bottom:1.8rem;
+    }
+
+    .logo-crebe{
+      display:block;
+      width:92px;
+      max-width:92px;
+      height:auto;
+      max-height:92px;
+      object-fit:contain;
+      flex-shrink:0;
+    }
+
+    .texto-institucional{
+      border-left:2px solid rgba(255,255,255,.35);
+      padding-left:1.25rem;
+    }
+
+    .nombre-institucional{
+      margin:0;
+      color:#fff;
+      font-size:clamp(1rem,1.6vw,1.35rem);
+      font-weight:800;
+      line-height:1.25;
+    }
+
+    .detalle-institucional{
+      margin:.35rem 0 0;
+      color:#fff;
+      font-size:clamp(.9rem,1.2vw,1.05rem);
+      font-weight:500;
+    }
+
+    .etiqueta-superior,
+    .seccion-etiqueta{
+      margin:0 0 10px;
+      color:#bde5da;
+      font-size:.79rem;
+      font-weight:900;
+      letter-spacing:.12em;
+      text-transform:uppercase;
+    }
+
+    .seccion-etiqueta{color:var(--verde-700)}
+
+    .portada h1{
+      max-width:860px;
+      margin:0;
+      color:#fff;
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(2.35rem,5vw,4.2rem);
+      font-weight:600;
+      line-height:1.03;
+      letter-spacing:-.045em;
+    }
+
+    .subtitulo{
+      max-width:840px;
+      margin:20px 0 0;
+      color:#e7f1f3;
+      font-size:clamp(1rem,1.7vw,1.18rem);
+    }
+
+    .acciones-portada{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:26px;
+    }
+
+    .boton-portada{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 16px;
+      color:var(--azul-900);
+      background:#fff;
+      border-radius:999px;
+      font-weight:850;
+      text-decoration:none;
+    }
+
+    .boton-portada.secundario{
+      color:#fff;
+      background:rgba(255,255,255,.1);
+      border:1px solid rgba(255,255,255,.45);
+    }
+
+    main{
+      width:min(1240px,calc(100% - 40px));
+      margin:0 auto;
+    }
+
+    .panel-contenido{
+      position:relative;
+      z-index:2;
+      margin-top:-52px;
+      padding:clamp(22px,4vw,38px);
+      background:rgba(255,255,255,.98);
+      border:1px solid rgba(215,224,229,.9);
+      border-radius:var(--radio);
+      box-shadow:var(--sombra);
+    }
+
+    .encabezado-seccion h2{
+      max-width:900px;
+      margin:0;
+      color:var(--azul-900);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:clamp(1.8rem,3.4vw,2.8rem);
+      font-weight:600;
+      letter-spacing:-.04em;
+      line-height:1.05;
+    }
+
+    .texto-principal{
+      max-width:940px;
+      margin:16px 0 0;
+      color:var(--texto-suave);
+      font-size:1.04rem;
+      line-height:1.75;
+    }
+
+    .grid-contacto{
+      display:grid;
+      grid-template-columns:repeat(2,minmax(0,1fr));
+      gap:20px;
+      margin-top:30px;
+    }
+
+    .tarjeta-contacto{
+      position:relative;
+      overflow:hidden;
+      padding:24px;
+      background:#fff;
+      border:1px solid var(--borde);
+      border-radius:var(--radio);
+      box-shadow:var(--sombra);
+    }
+
+    .tarjeta-contacto:before{
+      position:absolute;
+      right:-42px;
+      top:-42px;
+      width:120px;
+      height:120px;
+      background:var(--verde-100);
+      border-radius:50%;
+      content:"";
+    }
+
+    .contacto-icono{
+      position:relative;
+      z-index:1;
+      display:grid;
+      width:44px;
+      height:44px;
+      margin-bottom:16px;
+      place-items:center;
+      color:#fff;
+      background:var(--verde-700);
+      border-radius:13px;
+      font-weight:900;
+    }
+
+    .tarjeta-contacto h3{
+      position:relative;
+      z-index:1;
+      margin:0 0 10px;
+      color:var(--azul-900);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:1.35rem;
+      line-height:1.2;
+    }
+
+    .tarjeta-contacto p{
+      position:relative;
+      z-index:1;
+      margin:0;
+      color:var(--texto-suave);
+      line-height:1.7;
+    }
+
+    .tarjeta-contacto a{
+      color:var(--verde-700);
+      font-weight:800;
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    .canales{
+      margin-top:30px;
+      padding:24px;
+      background:var(--azul-100);
+      border:1px solid var(--borde);
+      border-radius:16px;
+      line-height:1.7;
+    }
+
+    .canales h3{
+      margin:0 0 12px;
+      color:var(--azul-900);
+      font-family:Georgia,"Times New Roman",serif;
+      font-size:1.35rem;
+    }
+
+    .canales p{
+      margin:0;
+      color:var(--texto-suave);
+    }
+
+    .canales a{
+      color:var(--verde-700);
+      font-weight:800;
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    .nota-contacto{
+      margin-top:18px;
+      padding:18px;
+      color:var(--texto-suave);
+      background:var(--arena-100);
+      border:1px solid var(--borde);
+      border-radius:16px;
+      line-height:1.7;
+    }
+
+    .nota-contacto strong{
+      color:var(--azul-900);
+    }
+
+    .acciones-inferiores{
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
+      margin-top:28px;
+    }
+
+    .boton-secundario{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:11px 15px;
+      color:#fff;
+      background:var(--verde-700);
+      border-radius:999px;
+      font-weight:850;
+      text-decoration:none;
+    }
+
+    .boton-secundario.claro{
+      color:var(--verde-700);
+      background:var(--verde-100);
+      border:1px solid var(--borde);
+    }
+
+    footer{
+      margin-top:56px;
+      padding:44px clamp(20px,5vw,72px) 28px;
+      color:#dbe9ee;
+      background:var(--azul-900);
+    }
+
+    .footer-contenido{
+      display:grid;
+      grid-template-columns:1.2fr 1fr 1.25fr;
+      gap:32px;
+      max-width:1240px;
+      margin:0 auto;
+    }
+
+    .footer-bloque h2{
+      margin:0 0 10px;
+      color:#fff;
+      font-size:1rem;
+    }
+
+    .footer-bloque p{
+      margin:0;
+      color:#dbe9ee;
+      line-height:1.65;
+    }
+
+    .footer-bloque a{
+      color:#dbe9ee;
+      text-decoration:underline;
+      text-underline-offset:3px;
+    }
+
+    .footer-identidad{
+      display:flex;
+      gap:16px;
+      align-items:flex-start;
+    }
+
+    .logo-footer{
+      display:block;
+      width:72px;
+      max-width:72px;
+      height:auto;
+      max-height:72px;
+      object-fit:contain;
+      flex-shrink:0;
+    }
+
+    .footer-final{
+      max-width:1240px;
+      margin:28px auto 0;
+      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,.18);
+    }
+
+    .footer-final p{
+      margin:0;
+      color:#dbe9ee;
+      font-size:.92rem;
+    }
+
+    @media(max-width:980px){
+      .grid-contacto{grid-template-columns:1fr}
+      .footer-contenido{grid-template-columns:1fr}
+      .footer-identidad{align-items:center}
+    }
+
+    @media(max-width:720px){
+      .cabecera{padding-bottom:72px}
+
+      .navegacion{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+
+      .enlaces-cabecera{justify-content:flex-start}
+
+      .bloque-institucional{
+        align-items:flex-start;
+        flex-direction:column;
+      }
+
+      .texto-institucional{
+        padding-left:0;
+        border-left:0;
+      }
+
+      .logo-crebe{
+        width:76px;
+        max-width:76px;
+        max-height:76px;
+      }
+
+      main{width:min(100% - 28px,1240px)}
+
+      .footer-identidad{flex-direction:column}
+
+      .logo-footer{
+        width:60px;
+        max-width:60px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <a class="salto-contenido" href="#contenido-principal">Ir al contenido</a>
+
+  <header class="cabecera" id="inicio">
+    <nav class="navegacion" aria-label="Navegación principal">
+      <a class="marca" href="index.html" aria-label="Volver a Accesos Complementarios">
+        <span class="marca-icono" aria-hidden="true">AC</span>
+        <span>Accesos Complementarios</span>
+      </a>
+
+      <div class="enlaces-cabecera">
+        <a class="enlace-cabecera" href="https://tuzonainclusiva.weebly.com/">Inicio</a>
+        <a class="enlace-cabecera" href="index.html">Accesos</a>
+        <a class="enlace-cabecera" href="nosotros.html">Nosotros</a>
+        <a class="enlace-cabecera" href="que-hacemos.html">Qué hacemos</a>
+        <a class="enlace-cabecera" href="repositorios.html">Repositorios</a>
+      </div>
+    </nav>
+
+    <div class="portada">
+      <div class="bloque-institucional" aria-label="Identidad institucional">
+        <img class="logo-crebe" src="https://raw.githubusercontent.com/gabriel-lsp/banco-digital-lsp/main/logo-crebe.png" alt="Logo del CREBE Señor de los Milagros - Ucayali">
+        <div class="texto-institucional">
+          <p class="nombre-institucional">CREBE "Señor de los Milagros" - Ucayali</p>
+          <p class="detalle-institucional">Centro de Recursos de Educación Básica Especial</p>
+        </div>
+      </div>
+
+      <p class="etiqueta-superior">Comunicación institucional</p>
+      <h1>Contacto</h1>
+      <p class="subtitulo">Espacio para realizar consultas, enviar sugerencias, coordinar acciones institucionales o comunicar dificultades vinculadas al uso de Tu Zona Inclusiva.</p>
+
+      <div class="acciones-portada">
+        <a class="boton-portada" href="#contenido-principal">Ver contacto</a>
+        <a class="boton-portada secundario" href="index.html">Volver a accesos</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido-principal">
+    <section class="panel-contenido" aria-labelledby="titulo-contacto">
+      <div class="encabezado-seccion">
+        <p class="seccion-etiqueta">Atención y orientación</p>
+        <h2 id="titulo-contacto">Comunícate con el CREBE y con el equipo responsable de la organización digital</h2>
+        <p class="texto-principal">Este espacio permite establecer comunicación con el CREBE "Señor de los Milagros" - Ucayali y con el equipo responsable de la organización de Tu Zona Inclusiva. Las consultas pueden estar relacionadas con el uso de los repositorios, acceso a recursos, orientación general, novedades, participación en actividades o comunicación institucional.</p>
+      </div>
+
+      <div class="grid-contacto">
+        <article class="tarjeta-contacto">
+          <span class="contacto-icono">1</span>
+          <h3>Consultas generales</h3>
+          <p>Para preguntas sobre el CREBE, sus servicios de apoyo, acciones institucionales o información general relacionada con la atención a la diversidad y la educación inclusiva.</p>
+        </article>
+
+        <article class="tarjeta-contacto">
+          <span class="contacto-icono">2</span>
+          <h3>Soporte de la plataforma</h3>
+          <p>Para reportar enlaces que no abren, errores en los recursos, dificultades de navegación o sugerencias para mejorar los accesos digitales de Tu Zona Inclusiva.</p>
+        </article>
+
+        <article class="tarjeta-contacto">
+          <span class="contacto-icono">3</span>
+          <h3>Coordinación institucional</h3>
+          <p>Para instituciones educativas, docentes, directivos o familias que requieran orientación, articulación o información sobre actividades vinculadas al CREBE.</p>
+        </article>
+
+        <article class="tarjeta-contacto">
+          <span class="contacto-icono">4</span>
+          <h3>Sugerencias y participación</h3>
+          <p>Para compartir propuestas, observaciones o aportes que ayuden a mejorar la organización de los recursos, las páginas generales y los módulos de la plataforma.</p>
+        </article>
+      </div>
+
+      <div class="canales">
+        <h3>Canales de contacto</h3>
+        <p>
+          CREBE "Señor de los Milagros" - Ucayali<br>
+          Correo: <a href="mailto:senordelosmilagroscrebe@gmail.com">senordelosmilagroscrebe@gmail.com</a><br>
+          Horario de atención: lunes a viernes, 8:00 a.m. - 12:00 p.m.<br>
+          Facebook: <a href="https://www.facebook.com/CREBESM" target="_blank" rel="noopener noreferrer">CREBE Señor de los Milagros - Ucayali</a>
+        </p>
+      </div>
+
+      <div class="nota-contacto">
+        <strong>Para una mejor atención:</strong> se recomienda indicar nombre, institución educativa, motivo de contacto y un medio de comunicación válido. Las respuestas se brindan de acuerdo con la disponibilidad institucional y la naturaleza de la consulta.
+      </div>
+
+      <div class="acciones-inferiores">
+        <a class="boton-secundario" href="mailto:senordelosmilagroscrebe@gmail.com">Enviar correo</a>
+        <a class="boton-secundario claro" href="repositorios.html">Ver repositorios</a>
+        <a class="boton-secundario claro" href="firma-tu-visita.html">Firmar visita</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-contenido">
+      <div class="footer-bloque footer-identidad">
+        <img class="logo-footer" src="https://raw.githubusercontent.com/gabriel-lsp/banco-digital-lsp/main/logo-crebe.png" alt="Logo del CREBE Señor de los Milagros - Ucayali">
+        <div>
+          <h2>Accesos Complementarios</h2>
+          <p>Espacio de entrada a las páginas generales de Tu Zona Inclusiva.</p>
+        </div>
+      </div>
+
+      <div class="footer-bloque">
+        <h2>Enlaces</h2>
+        <p>
+          <a href="index.html">Accesos</a><br>
+          <a href="nosotros.html">Nosotros</a><br>
+          <a href="que-hacemos.html">Qué hacemos</a><br>
+          <a href="repositorios.html">Repositorios</a><br>
+          <a href="lineas-de-accion.html">Líneas de acción</a><br>
+          <a href="firma-tu-visita.html">Firma tu visita</a>
+        </p>
+      </div>
+
+      <div class="footer-bloque">
+        <h2>Contacto CREBE</h2>
+        <p>
+          CREBE "Señor de los Milagros" - Ucayali<br>
+          Correo: senordelosmilagroscrebe@gmail.com<br>
+          Horario: lunes a viernes, 8:00 a.m. - 12:00 p.m.<br>
+          <a href="https://www.facebook.com/CREBESM" target="_blank" rel="noopener noreferrer">Facebook</a>
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-final">
+      <p>© 2026 Gabriel Berrospi. Desarrollo original. Uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.</p>
+    </div>
+  </footer>
+</body>
+</html>
