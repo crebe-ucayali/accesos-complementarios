@@ -47,32 +47,62 @@
         </div>
         <div class="campo-registro">
           <label for="rol">Cargo o rol</label>
-            <select id="rol" name="rol" required>
-              <option value="">Seleccionar</option>
-              <option>Docente</option>
-              <option>Familia</option>
-              <option>Directivo</option>
-              <option>Estudiante</option>
-              <option>Especialista</option>
-              <option>Personal CREBE</option>
-              <option>Otro</option>
-            </select>
-          </div>
-        <div class="form-group">
-          <label>Módulo(s) o recurso(s) visitado(s)</label>
-          <P class="ayuda-campo">Seleccione hasta 3 opciones.</p>
-          <div class="opciones-modulos">
-            <label><input type="checkbox" name="modulo_visitado" value="Plataforma general"> Plataforma general</label>
-            <label><input type="checkbox" name="modulo_visitado" value="Banco Digital LSP"> Banco Digital LSP</label>
-            <label><input type="checkbox" name="modulo_visitado" value="Banco Digital Braille"> Banco Digital Braille</label>
-            <label><input type="checkbox" name="modulo_visitado" value="Banco Digital Accesible"> Banco Digital Accesible</label>
-            <label><input type="checkbox" name="modulo_visitado" value="Materiales Educativos Accesibles"> Materiales Educativos Accesibles</label>
-            <label><input type="checkbox" name="modulo_visitado" value="Juegos Interactivos Accesibles"> Juegos Interactivos Accesibles</label>
-            <label><input type="checkbox" name="modulo_visitado" value="Capacitaciones CREBE"> Capacitaciones CREBE</label>
-            <label><input type="checkbox" name="modulo_visitado" value="Noti Inclusivos"> Noti Inclusivos</label>
-            <label><input type="checkbox" name="modulo_visitado" value="Otro recurso o acceso de AC"> Otro recurso o acceso de AC</label>           
-          </div>
+          <select id="rol" name="rol" required>
+            <option value="">Seleccionar</option>
+            <option>Docente</option>
+            <option>Familia</option>
+            <option>Directivo</option>
+            <option>Estudiante</option>
+            <option>Especialista</option>
+            <option>Personal CREBE</option>
+            <option>Otro</option>
           </select>
+        </div>
+        <div class="campo-registro campo-completo modulo-visitado">
+          <span class="titulo-campo">Módulo(s) o recurso(s) visitado(s)</span>
+          <p class="ayuda-campo">Seleccione hasta 3 opciones.</p>
+
+          <div class="opciones-modulo" role="group" aria-label="Módulos o recursos visitados">
+            <label class="opcion-modulo">
+              <input type="checkbox" name="modulo_visitado" value="Plataforma general">
+              <span>Plataforma general</span>
+            </label>
+            <label class="opcion-modulo">
+              <input type="checkbox" name="modulo_visitado" value="Banco Digital LSP">
+              <span>Banco Digital LSP</span>
+            </label>
+            <label class="opcion-modulo">
+              <input type="checkbox" name="modulo_visitado" value="Banco Digital Braille">
+              <span>Banco Digital Braille</span>
+            </label>
+            <label class="opcion-modulo">
+              <input type="checkbox" name="modulo_visitado" value="Banco Digital Accesible">
+              <span>Banco Digital Accesible</span>
+            </label>
+            <label class="opcion-modulo">
+              <input type="checkbox" name="modulo_visitado" value="Materiales Educativos Accesibles">
+              <span>Materiales Educativos Accesibles</span>
+            </label>
+            <label class="opcion-modulo">
+              <input type="checkbox" name="modulo_visitado" value="Juegos Interactivos Accesibles">
+              <span>Juegos Interactivos Accesibles</span>
+            </label>
+            <label class="opcion-modulo">
+              <input type="checkbox" name="modulo_visitado" value="Capacitaciones CREBE">
+              <span>Capacitaciones CREBE</span>
+            </label>
+            <label class="opcion-modulo">
+              <input type="checkbox" name="modulo_visitado" value="Noti Inclusivos">
+              <span>Noti Inclusivos</span>
+            </label>
+            <label class="opcion-modulo">
+              <input type="checkbox" name="modulo_visitado" value="Otro recurso o acceso de AC">
+              <span>Otro recurso o acceso de AC</span>
+            </label>
+          </div>
+
+          <input type="hidden" id="modulosSeleccionados" name="modulos_seleccionados">
+          <p id="mensajeModulo" class="mensaje-error" aria-live="polite"></p>
         </div>
         <div class="campo-registro campo-completo">
           <label for="correo">Correo electrónico <span class="texto-opcional">(opcional)</span>
@@ -83,7 +113,8 @@
           <label for="comentario">Comentario u observación <span class="texto-opcional">(opcional)</span>
           </label>
           <textarea id="comentario" name="comentario" rows="4" placeholder="Escribe una sugerencia, necesidad, observación o recurso que te gustaría encontrar."></textarea>
-        </div><div class="acciones-registro campo-completo">
+        </div>
+        <div class="acciones-registro campo-completo">
           <button class="boton-principal" type="submit">Enviar registro</button>
           <p id="mensaje-registro" class="mensaje-registro" aria-live="polite"></p>
         </div>
