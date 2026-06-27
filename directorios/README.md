@@ -1,6 +1,6 @@
 # Directorios - AC
 
-Esta carpeta contiene las páginas de directorio del repositorio **Accesos Complementarios - AC**.
+Esta carpeta contiene las páginas de directorio del repositorio **Accesos Complementarios - AC**, desarrollado como parte del **proyecto personal** del **Psicólogo Gabriel Berrospi**.
 
 ## Finalidad
 
@@ -25,4 +25,4 @@ Los directorios permiten ubicar información de manera rápida, filtrar por cate
 
 ## Autoría
 
-La estructura, organización y adaptación funcional de esta carpeta forman parte del desarrollo original del **Psicólogo Gabriel Berrospi**, con uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.
+La estructura, organización y adaptación funcional de esta carpeta forman parte del **proyecto personal y desarrollo original del Psicólogo Gabriel Berrospi**, con uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.
