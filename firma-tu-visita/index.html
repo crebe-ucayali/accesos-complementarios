@@ -58,18 +58,20 @@
               <option>Otro</option>
             </select>
           </div>
-        <div class="campo-registro campo-completo">
-          <label for="modulo">Módulo visitado</label>
-          <select id="modulo" name="modulo" required>
-            <option value="">Seleccionar</option>
-            <option>Plataforma general</option>
-            <option>Capacitaciones CREBE</option>
-            <option>Banco Digital Accesible</option>
-            <option>Materiales Educativos Accesibles</option>
-            <option>Juegos Interactivos Accesibles</option>
-            <option>Noti Inclusivos</option>
-            <option>Repositorio Accesible</option>
-            <option>Otro</option>
+        <div class="form-group">
+          <label>Módulo(s) o recurso(s) visitado(s)</label>
+          <P class="ayuda-campo">Seleccione hasta 3 opciones.</p>
+          <div class="opciones-modulos">
+            <label><input type="checkbox" name="modulo_visitado" value="Plataforma general"> Plataforma general</label>
+            <label><input type="checkbox" name="modulo_visitado" value="Banco Digital LSP"> Banco Digital LSP</label>
+            <label><input type="checkbox" name="modulo_visitado" value="Banco Digital Braille"> Banco Digital Braille</label>
+            <label><input type="checkbox" name="modulo_visitado" value="Banco Digital Accesible"> Banco Digital Accesible</label>
+            <label><input type="checkbox" name="modulo_visitado" value="Materiales Educativos Accesibles"> Materiales Educativos Accesibles</label>
+            <label><input type="checkbox" name="modulo_visitado" value="Juegos Interactivos Accesibles"> Juegos Interactivos Accesibles</label>
+            <label><input type="checkbox" name="modulo_visitado" value="Capacitaciones CREBE"> Capacitaciones CREBE</label>
+            <label><input type="checkbox" name="modulo_visitado" value="Noti Inclusivos"> Noti Inclusivos</label>
+            <label><input type="checkbox" name="modulo_visitado" value="Otro recurso o acceso de AC"> Otro recurso o acceso de AC</label>           
+          </div>
           </select>
         </div>
         <div class="campo-registro campo-completo">
