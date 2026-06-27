@@ -2,20 +2,19 @@
 
 ## Propósito
 
-Este documento orienta la revisión y actualización del repositorio **Accesos Complementarios - AC**, para conservar su utilidad, coherencia, accesibilidad y sustento documental.
+Este documento orienta la revisión y actualización del repositorio **Accesos Complementarios - AC**, para conservar su utilidad, coherencia, accesibilidad y documentación interna.
 
 ## Naturaleza del proyecto
 
-AC forma parte de un **proyecto personal de desarrollo propio** del **Psicólogo Gabriel Berrospi**, elaborado como apoyo tecnológico, educativo, inclusivo y accesible. Su uso institucional autorizado debe mantener el reconocimiento del autor y del desarrollo original.
+AC forma parte de un **proyecto personal de desarrollo propio** del **Psicólogo Gabriel Berrospi**, elaborado como apoyo digital, informativo, inclusivo y accesible.
 
 ## Criterios generales
 
-- Mantener la autoría del desarrollo original en los documentos y pies de página correspondientes.
+- Mantener la autoría del desarrollo original en los documentos correspondientes.
 - Actualizar enlaces cuando cambien las rutas oficiales.
 - Revisar periódicamente los datos de entidades públicas, teléfonos, correos, direcciones y horarios.
 - Evitar publicar información personal sensible o no autorizada.
 - Priorizar lenguaje claro, directo y comprensible.
-- Conservar la coherencia visual con el ecosistema CREBE.
 - Mantener navegación accesible, etiquetas claras y textos alternativos cuando corresponda.
 - Registrar los cambios relevantes para sostener la trazabilidad del proyecto personal.
 
@@ -33,8 +32,8 @@ Los recursos como galería, calendario o firma de visita deben utilizarse con fi
 
 ## Registro de cambios
 
-Cuando se realicen modificaciones importantes, se recomienda registrar la fecha, el cambio aplicado y el motivo, especialmente si afecta directorios, enlaces, contenido institucional o funcionamiento interactivo.
+Cuando se realicen modificaciones importantes, se recomienda registrar la fecha, el cambio aplicado y el motivo, especialmente si afecta directorios, enlaces, contenido informativo o funcionamiento interactivo.
 
 ## Autoría
 
-Estos criterios forman parte de la documentación base del **proyecto personal y desarrollo original del Psicólogo Gabriel Berrospi**, con uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.
+Estos criterios forman parte de la documentación base del **proyecto personal y desarrollo original del Psicólogo Gabriel Berrospi**.
