@@ -1,6 +1,6 @@
 # Páginas generales - AC
 
-Esta carpeta contiene páginas informativas generales del repositorio **Accesos Complementarios - AC**.
+Esta carpeta contiene páginas informativas generales del repositorio **Accesos Complementarios - AC**, desarrollado como parte del **proyecto personal** del **Psicólogo Gabriel Berrospi**.
 
 ## Finalidad
 
@@ -27,7 +27,7 @@ Estas páginas ayudan a contextualizar el repositorio AC y permiten que docentes
 
 ## Autoría
 
-La organización, estructura y redacción funcional de esta carpeta forman parte del desarrollo original del **Psicólogo Gabriel Berrospi**, con uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.
+La organización, estructura y redacción funcional de esta carpeta forman parte del **proyecto personal y desarrollo original del Psicólogo Gabriel Berrospi**, con uso institucional autorizado al CREBE "Señor de los Milagros" - Ucayali.
 
 ## Nota de compatibilidad
 
