@@ -119,27 +119,40 @@ html.eva-alto-contraste main,
 html.eva-alto-contraste section,
 html.eva-alto-contraste article,
 html.eva-alto-contraste footer,
+html.eva-alto-contraste .panel,
 html.eva-alto-contraste .panel-busqueda,
 html.eva-alto-contraste .panel-contenido,
 html.eva-alto-contraste .panel-accesos,
+html.eva-alto-contraste .panel-recursos,
+html.eva-alto-contraste .panel-registro,
 html.eva-alto-contraste .tarjeta-material,
 html.eva-alto-contraste .tarjeta-info,
 html.eva-alto-contraste .tarjeta-linea,
 html.eva-alto-contraste .tarjeta-personal,
 html.eva-alto-contraste .tarjeta-acceso,
+html.eva-alto-contraste .tarjeta-recurso,
+html.eva-alto-contraste .tarjeta-noti,
 html.eva-alto-contraste .bloque-info,
 html.eva-alto-contraste .bloque-accion,
-html.eva-alto-contraste .panel-registro,
+html.eva-alto-contraste .bloque-lista-noti,
 html.eva-alto-contraste .campo-registro,
 html.eva-alto-contraste .opcion-modulo,
 html.eva-alto-contraste .bloque-informativo-registro,
 html.eva-alto-contraste .directorio-item,
 html.eva-alto-contraste .directorio-icono,
 html.eva-alto-contraste .directorio-boton,
-html.eva-alto-contraste .nota-inferior{
+html.eva-alto-contraste .nota-inferior,
+html.eva-alto-contraste .estado,
+html.eva-alto-contraste .estado-vacio,
+html.eva-alto-contraste .contador,
+html.eva-alto-contraste .etiqueta-noti,
+html.eva-alto-contraste .item-recurso,
+html.eva-alto-contraste .numero-recurso,
+html.eva-alto-contraste .lista-ejemplos{
   color:#ffffff!important;
   background:#000000!important;
   border-color:#ffffff!important;
+  box-shadow:none!important;
 }
 
 html.eva-alto-contraste h1,
@@ -149,6 +162,10 @@ html.eva-alto-contraste p,
 html.eva-alto-contraste li,
 html.eva-alto-contraste span,
 html.eva-alto-contraste label,
+html.eva-alto-contraste strong,
+html.eva-alto-contraste .descripcion,
+html.eva-alto-contraste .descripcion-panel,
+html.eva-alto-contraste .texto-bloque-noti,
 html.eva-alto-contraste .opcion-modulo span,
 html.eva-alto-contraste .titulo-campo,
 html.eva-alto-contraste .ayuda-campo,
@@ -156,7 +173,14 @@ html.eva-alto-contraste .texto-opcional,
 html.eva-alto-contraste .directorio-texto,
 html.eva-alto-contraste .directorio-texto h3,
 html.eva-alto-contraste .directorio-texto p,
-html.eva-alto-contraste .directorio-icono{
+html.eva-alto-contraste .directorio-icono,
+html.eva-alto-contraste .tarjeta-noti h3,
+html.eva-alto-contraste .tarjeta-noti p,
+html.eva-alto-contraste .tarjeta-recurso h3,
+html.eva-alto-contraste .tarjeta-recurso p,
+html.eva-alto-contraste .item-recurso,
+html.eva-alto-contraste .estado,
+html.eva-alto-contraste .contador{
   color:#ffffff!important;
   text-shadow:none!important;
   opacity:1!important;
@@ -187,14 +211,25 @@ html.eva-alto-contraste .opcion-modulo:focus-within span{
 }
 
 html.eva-alto-contraste .directorio-boton,
-html.eva-alto-contraste .directorio-boton.neutro{
+html.eva-alto-contraste .directorio-boton.neutro,
+html.eva-alto-contraste .enlace-noti,
+html.eva-alto-contraste .numero-recurso{
   color:#ffff00!important;
   background:#07324a!important;
   border:1px solid #ffff00!important;
 }
 
+html.eva-alto-contraste .etiqueta-noti,
+html.eva-alto-contraste .estado{
+  color:#ffff00!important;
+  background:#07324a!important;
+  border-color:#ffff00!important;
+}
+
 html.eva-alto-contraste .directorio-item:hover,
-html.eva-alto-contraste a.directorio-item:focus{
+html.eva-alto-contraste a.directorio-item:focus,
+html.eva-alto-contraste .item-recurso:focus,
+html.eva-alto-contraste .item-recurso:hover{
   background:#07324a!important;
   border-color:#ffff00!important;
 }
