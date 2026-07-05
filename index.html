@@ -5,88 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Accesos Complementarios del CREBE Ucayali: entrada a páginas generales de orientación, contacto, directorio, registro de visita y enlaces institucionales.">
   <title>Accesos Complementarios | CREBE Ucayali</title>
-  <link rel="stylesheet" href="estilos.css?v=2">
+  <link rel="stylesheet" href="estilos.css?v=3">
   <style>
-    .patron-portada{
-      position:absolute;
-      inset:0;
-      z-index:0;
-      overflow:hidden;
-      pointer-events:none;
-      background-image:url("https://gabriel-lsp.github.io/banco-digital-accesible/patron-shipibo.webp");
-      background-repeat:repeat;
-      background-size:cover;
-      background-position:center;
-      opacity:.30;
-      filter:saturate(1.15) contrast(1.08);
-    }
-
-    .cabecera .navegacion,
-    .cabecera .portada{
-      position:relative;
-      z-index:1;
-    }
-
-    .marca-institucional{
-      align-items:center;
-      gap:14px;
-      max-width:min(560px,100%);
-    }
-
-    .marca-logo-superior{
-      display:block;
-      width:58px;
-      height:58px;
-      object-fit:contain;
-      flex-shrink:0;
-      padding:4px;
-      background:rgba(255,255,255,.96);
-      border-radius:18px;
-      box-shadow:0 10px 24px rgba(0,0,0,.14);
-    }
-
-    .marca-texto-superior{
-      display:block;
-      padding-left:14px;
-      border-left:2px solid rgba(255,255,255,.35);
-      text-shadow:0 2px 4px rgba(0,0,0,.28);
-    }
-
-    .marca-modulo{
-      display:block;
-      margin:0 0 3px;
-      color:#c9f7ee;
-      font-size:.76rem;
-      font-weight:900;
-      line-height:1.15;
-      letter-spacing:.16em;
-      text-transform:uppercase;
-    }
-
-    .marca-nombre-institucional{
-      display:block;
-      color:#ffffff;
-      font-size:1.02rem;
-      font-weight:900;
-      line-height:1.2;
-    }
-
-    .marca-detalle-institucional{
-      display:block;
-      margin-top:4px;
-      color:rgba(255,255,255,.94);
-      font-size:.88rem;
-      font-weight:750;
-      line-height:1.25;
-    }
-
-    @media (max-width:700px){
-      .marca-institucional{align-items:flex-start;}
-      .marca-logo-superior{width:52px;height:52px;border-radius:16px;}
-      .marca-texto-superior{padding-left:12px;}
-      .marca-nombre-institucional{font-size:.94rem;}
-      .marca-detalle-institucional{font-size:.82rem;}
-    }
+    body .cabecera{position:relative!important;overflow:hidden!important;padding:30px 18px 145px!important;color:#ffffff!important;background:radial-gradient(circle at 84% 70%,rgba(255,255,255,.11) 0 22%,transparent 23%),radial-gradient(circle at 86% 74%,rgba(255,255,255,.08) 0 36%,transparent 37%),linear-gradient(135deg,#0b3550 0%,#0f4f57 48%,#0f766e 100%)!important;}
+    body .cabecera::after{display:none!important;content:none!important;}
+    body .patron-portada{position:absolute!important;inset:0!important;z-index:0!important;overflow:hidden!important;pointer-events:none!important;background-image:url("https://gabriel-lsp.github.io/banco-digital-accesible/patron-shipibo.webp?v=2")!important;background-repeat:repeat!important;background-size:cover!important;background-position:center!important;opacity:.30!important;filter:saturate(1.15) contrast(1.08)!important;}
+    body .cabecera .navegacion,body .cabecera .portada{position:relative!important;z-index:1!important;}
+    body .navegacion{max-width:1120px!important;margin:0 auto!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:20px!important;flex-wrap:wrap!important;}
+    body .marca-institucional{display:inline-flex!important;align-items:center!important;gap:14px!important;max-width:min(560px,100%)!important;color:#ffffff!important;text-decoration:none!important;font-weight:900!important;font-size:1.05rem!important;}
+    body .marca-logo-superior{display:block!important;width:58px!important;height:58px!important;object-fit:contain!important;flex-shrink:0!important;padding:4px!important;background:rgba(255,255,255,.96)!important;border-radius:18px!important;box-shadow:0 10px 24px rgba(0,0,0,.14)!important;}
+    body .marca-texto-superior{display:block!important;padding-left:14px!important;border-left:2px solid rgba(255,255,255,.35)!important;text-shadow:0 2px 4px rgba(0,0,0,.28)!important;}
+    body .marca-modulo{display:block!important;margin:0 0 3px!important;color:#c9f7ee!important;font-size:.76rem!important;font-weight:900!important;line-height:1.15!important;letter-spacing:.16em!important;text-transform:uppercase!important;}
+    body .marca-nombre-institucional{display:block!important;color:#ffffff!important;font-size:1.02rem!important;font-weight:900!important;line-height:1.2!important;}
+    body .marca-detalle-institucional{display:block!important;margin-top:4px!important;color:rgba(255,255,255,.94)!important;font-size:.88rem!important;font-weight:750!important;line-height:1.25!important;}
+    body .enlaces-cabecera{display:flex!important;align-items:center!important;justify-content:flex-end!important;flex-wrap:wrap!important;gap:12px!important;}
+    body .enlace-cabecera{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:46px!important;padding:10px 22px!important;border:1px solid rgba(255,255,255,.45)!important;border-radius:999px!important;color:#ffffff!important;text-decoration:none!important;font-size:1rem!important;font-weight:800!important;background:rgba(255,255,255,.08)!important;text-shadow:0 2px 4px rgba(0,0,0,.24)!important;}
+    body .enlace-cabecera:hover{color:#ffffff!important;background:rgba(255,255,255,.16)!important;}
+    body .portada{position:relative!important;z-index:1!important;max-width:1120px!important;margin:70px auto 0!important;}
+    body .etiqueta-superior{margin:0 0 14px!important;color:#c9f7ee!important;font-size:.86rem!important;font-weight:900!important;letter-spacing:.18em!important;text-transform:uppercase!important;text-shadow:0 2px 4px rgba(0,0,0,.28)!important;}
+    body .portada h1{max-width:900px!important;margin:0 0 22px!important;color:#ffffff!important;font-family:Georgia,"Times New Roman",serif!important;font-size:clamp(2.5rem,5.8vw,4.15rem)!important;line-height:1.04!important;letter-spacing:-.04em!important;text-shadow:0 3px 5px rgba(0,0,0,.22)!important;}
+    body .subtitulo{max-width:880px!important;margin:0!important;color:rgba(255,255,255,.96)!important;font-size:1.22rem!important;line-height:1.65!important;text-shadow:0 2px 4px rgba(0,0,0,.28)!important;}
+    @media(max-width:700px){body .cabecera{padding:26px 18px 116px!important;}body .navegacion{align-items:flex-start!important;flex-direction:column!important;}body .portada{margin-top:54px!important;}body .marca-institucional{align-items:flex-start!important;}body .marca-logo-superior{width:52px!important;height:52px!important;border-radius:16px!important;}body .marca-texto-superior{padding-left:12px!important;}body .marca-nombre-institucional{font-size:.94rem!important;}body .marca-detalle-institucional{font-size:.82rem!important;}body .enlaces-cabecera{justify-content:flex-start!important;}}
   </style>
 </head>
 
@@ -106,15 +45,14 @@
         </span>
       </a>
       <div class="enlaces-cabecera">
-        <a class="enlace-cabecera" href="index.html">Inicio AC</a>
         <a class="enlace-cabecera" href="https://crebeucayali.weebly.com/">Inicio principal</a>
         <a class="enlace-cabecera" href="paginas/contacto.html">Contacto</a>
       </div>
     </nav>
 
     <div class="portada">
-      <p class="etiqueta-superior">Páginas generales de apoyo</p>
-      <h1>Accesos complementarios</h1>
+      <p class="etiqueta-superior">ECOSISTEMA VIRTUAL ACCESIBLE</p>
+      <h1>Accesos Complementarios</h1>
       <p class="subtitulo">Espacio de entrada a páginas generales de orientación, contacto, directorio, registro de visita y recursos de apoyo que complementan los módulos principales del CREBE Ucayali.</p>
     </div>
   </header>
@@ -130,77 +68,14 @@
       </div>
 
       <div class="grid-accesos">
-        <a class="tarjeta-acceso" href="paginas/nosotros.html">
-          <div>
-            <div class="tarjeta-superior"><span class="numero-acceso">01</span><span class="codigo-acceso">AC</span></div>
-            <h3>Nosotros</h3>
-            <p>Presentación general del CREBE Ucayali y del sentido institucional de la plataforma digital.</p>
-          </div>
-          <span class="ver-mas">Ingresar</span>
-        </a>
-
-        <a class="tarjeta-acceso" href="paginas/que-hacemos.html">
-          <div>
-            <div class="tarjeta-superior"><span class="numero-acceso">02</span><span class="codigo-acceso">AC</span></div>
-            <h3>Qué hacemos</h3>
-            <p>Descripción breve de las acciones de apoyo, orientación y fortalecimiento de la inclusión educativa.</p>
-          </div>
-          <span class="ver-mas">Ingresar</span>
-        </a>
-
-        <a class="tarjeta-acceso" href="https://gabriel-lsp.github.io/repositorio-accesible/">
-          <div>
-            <div class="tarjeta-superior"><span class="numero-acceso">03</span><span class="codigo-acceso">RA</span></div>
-            <h3>Repositorio accesible</h3>
-            <p>Acceso al espacio específico de materiales, equipos y producciones accesibles disponibles.</p>
-          </div>
-          <span class="ver-mas">Ir a RA</span>
-        </a>
-
-        <a class="tarjeta-acceso" href="paginas/contacto.html">
-          <div>
-            <div class="tarjeta-superior"><span class="numero-acceso">04</span><span class="codigo-acceso">AC</span></div>
-            <h3>Contacto</h3>
-            <p>Canales de comunicación para consultas, sugerencias, coordinación institucional o reporte de observaciones.</p>
-          </div>
-          <span class="ver-mas">Ingresar</span>
-        </a>
-
-        <a class="tarjeta-acceso" href="firma-tu-visita/">
-          <div>
-            <div class="tarjeta-superior"><span class="numero-acceso">05</span><span class="codigo-acceso">AC</span></div>
-            <h3>Firma tu visita</h3>
-            <p>Registro voluntario de presencia para conocer el alcance de uso y participación de la comunidad educativa.</p>
-          </div>
-          <span class="ver-mas">Ingresar</span>
-        </a>
-
-        <a class="tarjeta-acceso" href="paginas/lineas-de-accion.html">
-          <div>
-            <div class="tarjeta-superior"><span class="numero-acceso">06</span><span class="codigo-acceso">AC</span></div>
-            <h3>Líneas de acción</h3>
-            <p>Organización general de los ejes de trabajo que sostienen los recursos y servicios digitales.</p>
-          </div>
-          <span class="ver-mas">Ingresar</span>
-        </a>
-
-        <a class="tarjeta-acceso" href="directorios/directorio-institucional.html">
-          <div>
-            <div class="tarjeta-superior"><span class="numero-acceso">07</span><span class="codigo-acceso">AC</span></div>
-            <h3>Directorio institucional</h3>
-            <p>Acceso a entidades públicas, servicios y contactos de interés para educación, inclusión y discapacidad.</p>
-          </div>
-          <span class="ver-mas">Ingresar</span>
-        </a>
-
-        <a class="tarjeta-acceso" href="guia-de-uso.html">
-          <div>
-            <div class="tarjeta-superior"><span class="numero-acceso">08</span><span class="codigo-acceso">AC</span></div>
-            <h3>Guía de uso</h3>
-            <p>Orientaciones sencillas para navegar por la plataforma y ubicar los módulos principales.</p>
-          </div>
-          <span class="ver-mas">Ingresar</span>
-        </a>
+        <a class="tarjeta-acceso" href="paginas/nosotros.html"><div><div class="tarjeta-superior"><span class="numero-acceso">01</span><span class="codigo-acceso">AC</span></div><h3>Nosotros</h3><p>Presentación general del CREBE Ucayali y del sentido institucional de la plataforma digital.</p></div><span class="ver-mas">Ingresar</span></a>
+        <a class="tarjeta-acceso" href="paginas/que-hacemos.html"><div><div class="tarjeta-superior"><span class="numero-acceso">02</span><span class="codigo-acceso">AC</span></div><h3>Qué hacemos</h3><p>Descripción breve de las acciones de apoyo, orientación y fortalecimiento de la inclusión educativa.</p></div><span class="ver-mas">Ingresar</span></a>
+        <a class="tarjeta-acceso" href="https://gabriel-lsp.github.io/repositorio-accesible/"><div><div class="tarjeta-superior"><span class="numero-acceso">03</span><span class="codigo-acceso">RA</span></div><h3>Repositorio accesible</h3><p>Acceso al espacio específico de materiales, equipos y producciones accesibles disponibles.</p></div><span class="ver-mas">Ir a RA</span></a>
+        <a class="tarjeta-acceso" href="paginas/contacto.html"><div><div class="tarjeta-superior"><span class="numero-acceso">04</span><span class="codigo-acceso">AC</span></div><h3>Contacto</h3><p>Canales de comunicación para consultas, sugerencias, coordinación institucional o reporte de observaciones.</p></div><span class="ver-mas">Ingresar</span></a>
+        <a class="tarjeta-acceso" href="firma-tu-visita/"><div><div class="tarjeta-superior"><span class="numero-acceso">05</span><span class="codigo-acceso">AC</span></div><h3>Firma tu visita</h3><p>Registro voluntario de presencia para conocer el alcance de uso y participación de la comunidad educativa.</p></div><span class="ver-mas">Ingresar</span></a>
+        <a class="tarjeta-acceso" href="paginas/lineas-de-accion.html"><div><div class="tarjeta-superior"><span class="numero-acceso">06</span><span class="codigo-acceso">AC</span></div><h3>Líneas de acción</h3><p>Organización general de los ejes de trabajo que sostienen los recursos y servicios digitales.</p></div><span class="ver-mas">Ingresar</span></a>
+        <a class="tarjeta-acceso" href="directorios/directorio-institucional.html"><div><div class="tarjeta-superior"><span class="numero-acceso">07</span><span class="codigo-acceso">AC</span></div><h3>Directorio institucional</h3><p>Acceso a entidades públicas, servicios y contactos de interés para educación, inclusión y discapacidad.</p></div><span class="ver-mas">Ingresar</span></a>
+        <a class="tarjeta-acceso" href="guia-de-uso.html"><div><div class="tarjeta-superior"><span class="numero-acceso">08</span><span class="codigo-acceso">AC</span></div><h3>Guía de uso</h3><p>Orientaciones sencillas para navegar por la plataforma y ubicar los módulos principales.</p></div><span class="ver-mas">Ingresar</span></a>
       </div>
 
       <div class="nota-inferior">
