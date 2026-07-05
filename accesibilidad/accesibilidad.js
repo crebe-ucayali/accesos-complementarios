@@ -22,16 +22,6 @@
       texto:'Texto muy grande',
       clase:'eva-texto-muy-grande',
       excluye:['eva-texto-grande']
-    },
-    {
-      id:'espaciado-amplio',
-      texto:'Espaciado amplio',
-      clase:'eva-espaciado-amplio'
-    },
-    {
-      id:'reducir-movimiento',
-      texto:'Reducir movimiento',
-      clase:'eva-reducir-movimiento'
     }
   ];
 
@@ -52,10 +42,17 @@
     }
   }
 
+  function limpiarPreferenciasObsoletas(preferencias){
+    preferencias['eva-espaciado-amplio'] = false;
+    preferencias['eva-reducir-movimiento'] = false;
+    return preferencias;
+  }
+
   function aplicarPreferencias(preferencias){
+    const preferenciasLimpias = limpiarPreferenciasObsoletas(preferencias || {});
     CLASES.forEach(clase => document.documentElement.classList.remove(clase));
     opciones.forEach(opcion => {
-      if(preferencias[opcion.clase]){
+      if(preferenciasLimpias[opcion.clase]){
         document.documentElement.classList.add(opcion.clase);
       }
     });
@@ -69,7 +66,7 @@
   }
 
   function alternarOpcion(opcion, panel){
-    const preferencias = obtenerPreferencias();
+    const preferencias = limpiarPreferenciasObsoletas(obtenerPreferencias());
     const nuevoEstado = !preferencias[opcion.clase];
 
     if(opcion.excluye){
@@ -146,10 +143,11 @@
     });
 
     document.body.appendChild(panel);
-    actualizarBotones(panel, obtenerPreferencias());
+    actualizarBotones(panel, limpiarPreferenciasObsoletas(obtenerPreferencias()));
   }
 
-  const preferenciasIniciales = obtenerPreferencias();
+  const preferenciasIniciales = limpiarPreferenciasObsoletas(obtenerPreferencias());
+  guardarPreferencias(preferenciasIniciales);
   aplicarPreferencias(preferenciasIniciales);
 
   if(document.readyState === 'loading'){
