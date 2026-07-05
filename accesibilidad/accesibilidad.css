@@ -128,7 +128,11 @@ html.eva-alto-contraste .tarjeta-linea,
 html.eva-alto-contraste .tarjeta-personal,
 html.eva-alto-contraste .tarjeta-acceso,
 html.eva-alto-contraste .bloque-info,
-html.eva-alto-contraste .bloque-accion{
+html.eva-alto-contraste .bloque-accion,
+html.eva-alto-contraste .panel-registro,
+html.eva-alto-contraste .campo-registro,
+html.eva-alto-contraste .opcion-modulo,
+html.eva-alto-contraste .bloque-informativo-registro{
   color:#ffffff!important;
   background:#000000!important;
   border-color:#ffffff!important;
@@ -139,8 +143,37 @@ html.eva-alto-contraste h2,
 html.eva-alto-contraste h3,
 html.eva-alto-contraste p,
 html.eva-alto-contraste li,
-html.eva-alto-contraste span{
+html.eva-alto-contraste span,
+html.eva-alto-contraste label,
+html.eva-alto-contraste .opcion-modulo span,
+html.eva-alto-contraste .titulo-campo,
+html.eva-alto-contraste .ayuda-campo,
+html.eva-alto-contraste .texto-opcional{
   color:#ffffff!important;
+}
+
+html.eva-alto-contraste input,
+html.eva-alto-contraste select,
+html.eva-alto-contraste textarea{
+  color:#ffffff!important;
+  background:#000000!important;
+  border-color:#ffffff!important;
+}
+
+html.eva-alto-contraste input::placeholder,
+html.eva-alto-contraste textarea::placeholder{
+  color:#d1d5db!important;
+}
+
+html.eva-alto-contraste .opcion-modulo:has(input:checked),
+html.eva-alto-contraste .opcion-modulo:focus-within{
+  background:#07324a!important;
+  border-color:#ffff00!important;
+}
+
+html.eva-alto-contraste .opcion-modulo:has(input:checked) span,
+html.eva-alto-contraste .opcion-modulo:focus-within span{
+  color:#ffff00!important;
 }
 
 html.eva-alto-contraste .eva-accesibilidad-panel,
