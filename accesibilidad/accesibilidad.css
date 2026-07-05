@@ -125,6 +125,27 @@ html.eva-alto-contraste .panel-contenido,
 html.eva-alto-contraste .panel-accesos,
 html.eva-alto-contraste .panel-recursos,
 html.eva-alto-contraste .panel-registro,
+html.eva-alto-contraste .panel-principal,
+html.eva-alto-contraste .panel-juego,
+html.eva-alto-contraste .panel-secundario,
+html.eva-alto-contraste .panel-presentacion,
+html.eva-alto-contraste .panel-respuestas,
+html.eva-alto-contraste .aviso-pedagogico,
+html.eva-alto-contraste .configuracion,
+html.eva-alto-contraste .campo,
+html.eva-alto-contraste .zona-juego,
+html.eva-alto-contraste .visor-sena,
+html.eva-alto-contraste .indicadores,
+html.eva-alto-contraste .indicador,
+html.eva-alto-contraste .juego-conteo,
+html.eva-alto-contraste .escenario,
+html.eva-alto-contraste .opciones,
+html.eva-alto-contraste .tablero,
+html.eva-alto-contraste .criterios,
+html.eva-alto-contraste .criterio,
+html.eva-alto-contraste .reconocimiento,
+html.eva-alto-contraste .constancia,
+html.eva-alto-contraste .nota,
 html.eva-alto-contraste .tarjeta-material,
 html.eva-alto-contraste .tarjeta-info,
 html.eva-alto-contraste .tarjeta-linea,
@@ -134,6 +155,7 @@ html.eva-alto-contraste .tarjeta-recurso,
 html.eva-alto-contraste .tarjeta-noti,
 html.eva-alto-contraste .bloque-info,
 html.eva-alto-contraste .bloque-accion,
+html.eva-alto-contraste .bloque-presentacion,
 html.eva-alto-contraste .bloque-lista-noti,
 html.eva-alto-contraste .campo-registro,
 html.eva-alto-contraste .opcion-modulo,
@@ -146,9 +168,15 @@ html.eva-alto-contraste .estado,
 html.eva-alto-contraste .estado-vacio,
 html.eva-alto-contraste .contador,
 html.eva-alto-contraste .etiqueta-noti,
+html.eva-alto-contraste .estado-material,
+html.eva-alto-contraste .material-icono,
 html.eva-alto-contraste .item-recurso,
 html.eva-alto-contraste .numero-recurso,
-html.eva-alto-contraste .lista-ejemplos{
+html.eva-alto-contraste .lista-ejemplos,
+html.eva-alto-contraste .mensaje,
+html.eva-alto-contraste .categoria,
+html.eva-alto-contraste .pista,
+html.eva-alto-contraste .barra-progreso{
   color:#ffffff!important;
   background:#000000!important;
   border-color:#ffffff!important;
@@ -165,7 +193,9 @@ html.eva-alto-contraste label,
 html.eva-alto-contraste strong,
 html.eva-alto-contraste .descripcion,
 html.eva-alto-contraste .descripcion-panel,
+html.eva-alto-contraste .texto-panel,
 html.eva-alto-contraste .texto-bloque-noti,
+html.eva-alto-contraste .sobretitulo,
 html.eva-alto-contraste .opcion-modulo span,
 html.eva-alto-contraste .titulo-campo,
 html.eva-alto-contraste .ayuda-campo,
@@ -178,6 +208,19 @@ html.eva-alto-contraste .tarjeta-noti h3,
 html.eva-alto-contraste .tarjeta-noti p,
 html.eva-alto-contraste .tarjeta-recurso h3,
 html.eva-alto-contraste .tarjeta-recurso p,
+html.eva-alto-contraste .tarjeta-material h3,
+html.eva-alto-contraste .tarjeta-material p,
+html.eva-alto-contraste .criterio h3,
+html.eva-alto-contraste .criterio p,
+html.eva-alto-contraste .panel-presentacion h2,
+html.eva-alto-contraste .panel-presentacion p,
+html.eva-alto-contraste .aviso-pedagogico h2,
+html.eva-alto-contraste .aviso-pedagogico p,
+html.eva-alto-contraste .indicador strong,
+html.eva-alto-contraste .indicador span,
+html.eva-alto-contraste .mensaje,
+html.eva-alto-contraste .categoria,
+html.eva-alto-contraste .pista,
 html.eva-alto-contraste .item-recurso,
 html.eva-alto-contraste .estado,
 html.eva-alto-contraste .contador{
@@ -213,14 +256,18 @@ html.eva-alto-contraste .opcion-modulo:focus-within span{
 html.eva-alto-contraste .directorio-boton,
 html.eva-alto-contraste .directorio-boton.neutro,
 html.eva-alto-contraste .enlace-noti,
-html.eva-alto-contraste .numero-recurso{
+html.eva-alto-contraste .enlace-material,
+html.eva-alto-contraste .boton,
+html.eva-alto-contraste .numero-recurso,
+html.eva-alto-contraste .material-icono{
   color:#ffff00!important;
   background:#07324a!important;
   border:1px solid #ffff00!important;
 }
 
 html.eva-alto-contraste .etiqueta-noti,
-html.eva-alto-contraste .estado{
+html.eva-alto-contraste .estado,
+html.eva-alto-contraste .estado-material{
   color:#ffff00!important;
   background:#07324a!important;
   border-color:#ffff00!important;
@@ -229,7 +276,9 @@ html.eva-alto-contraste .estado{
 html.eva-alto-contraste .directorio-item:hover,
 html.eva-alto-contraste a.directorio-item:focus,
 html.eva-alto-contraste .item-recurso:focus,
-html.eva-alto-contraste .item-recurso:hover{
+html.eva-alto-contraste .item-recurso:hover,
+html.eva-alto-contraste .tarjeta-material:focus-within,
+html.eva-alto-contraste .criterio:focus-within{
   background:#07324a!important;
   border-color:#ffff00!important;
 }
