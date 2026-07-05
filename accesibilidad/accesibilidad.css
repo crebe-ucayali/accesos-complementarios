@@ -125,7 +125,10 @@ html.eva-alto-contraste .panel-accesos,
 html.eva-alto-contraste .tarjeta-material,
 html.eva-alto-contraste .tarjeta-info,
 html.eva-alto-contraste .tarjeta-linea,
-html.eva-alto-contraste .tarjeta-personal{
+html.eva-alto-contraste .tarjeta-personal,
+html.eva-alto-contraste .tarjeta-acceso,
+html.eva-alto-contraste .bloque-info,
+html.eva-alto-contraste .bloque-accion{
   color:#ffffff!important;
   background:#000000!important;
   border-color:#ffffff!important;
@@ -140,26 +143,27 @@ html.eva-alto-contraste span{
   color:#ffffff!important;
 }
 
+html.eva-alto-contraste .eva-accesibilidad-panel,
+html.eva-alto-contraste .eva-accesibilidad-menu,
+html.eva-alto-contraste .eva-accesibilidad-menu *,
+html.eva-alto-contraste .eva-accesibilidad-opcion{
+  color:#07324a!important;
+  background:#ffffff!important;
+}
+
+html.eva-alto-contraste .eva-accesibilidad-boton,
+html.eva-alto-contraste .eva-accesibilidad-opcion[aria-pressed="true"]{
+  color:#ffff00!important;
+  background:#07324a!important;
+  border-color:#ffff00!important;
+}
+
 html.eva-texto-grande{
   font-size:112.5%;
 }
 
 html.eva-texto-muy-grande{
   font-size:125%;
-}
-
-html.eva-espaciado-amplio body{
-  letter-spacing:.04em;
-  word-spacing:.08em;
-  line-height:1.85!important;
-}
-
-html.eva-reducir-movimiento *,
-html.eva-reducir-movimiento *::before,
-html.eva-reducir-movimiento *::after{
-  scroll-behavior:auto!important;
-  animation:none!important;
-  transition:none!important;
 }
 
 @media(max-width:700px){
