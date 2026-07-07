@@ -1,1 +1,4 @@
-Sitemap: https://gabriel-lsp.github.io/accesos-complementarios/sitemap.xml
+User-agent: *
+Allow: /
+
+Sitemap: https://crebe-ucayali.netlify.app/sitemap.xml
