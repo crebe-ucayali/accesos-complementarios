@@ -14,6 +14,68 @@
   margin-bottom:14px;
 }
 
+.calendario-actividades{
+  table-layout:fixed;
+  width:100%;
+}
+
+.calendario-actividades th{
+  text-align:center;
+}
+
+.calendario-actividades td{
+  position:relative;
+  height:150px;
+  padding:34px 10px 10px;
+  vertical-align:top;
+}
+
+.calendario-actividades td.vacio{
+  background:rgba(15, 23, 42, .04);
+}
+
+.numero-dia{
+  position:absolute;
+  top:8px;
+  right:9px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:28px;
+  height:28px;
+  padding:0 7px;
+  border-radius:999px;
+  font-size:.86rem;
+  font-weight:900;
+}
+
+.datos-actividad{
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+  font-size:.78rem;
+  line-height:1.3;
+  overflow-wrap:anywhere;
+}
+
+.datos-actividad strong{
+  font-size:.8rem;
+}
+
+.datos-actividad span{
+  display:block;
+}
+
+@media (max-width:900px){
+  .mes-julio{
+    overflow-x:auto;
+  }
+
+  .calendario-actividades{
+    min-width:980px;
+  }
+}
+
 @media (max-width:700px){
   .grid-meses{
     grid-template-columns:1fr;
@@ -27,5 +89,9 @@
   .calendario-mes,
   .tabla-calendario{
     min-width:560px;
+  }
+
+  .calendario-actividades{
+    min-width:980px;
   }
 }
