@@ -1,152 +1,162 @@
 @import url("../paginas/nosotros.css");
 
-/* Directorio institucional: registros horizontales en orden vertical */
+/* Diseño específico del directorio institucional */
+.panel-contenido{
+  max-width:1180px!important;
+}
+
 .grid-directorio{
-  display:flex;
-  flex-direction:column;
-  gap:16px;
-  width:100%;
-  margin-top:30px;
+  display:flex!important;
+  flex-direction:column!important;
+  grid-template-columns:none!important;
+  gap:14px!important;
+  width:100%!important;
+  margin-top:30px!important;
 }
 
 .tarjeta-personal{
-  display:grid;
-  grid-template-columns:72px minmax(220px,1.15fr) minmax(220px,1fr) minmax(250px,1.1fr);
-  align-items:center;
-  gap:22px;
-  width:100%;
-  padding:22px 24px;
-  background:#ffffff;
-  border:1px solid #d9e2ec;
-  border-left:6px solid #0f766e;
-  border-radius:22px;
-  box-shadow:0 10px 26px rgba(16,42,67,.10);
+  display:grid!important;
+  grid-template-columns:70px minmax(230px,1.2fr) minmax(220px,1fr) minmax(250px,1.1fr)!important;
+  align-items:center!important;
+  gap:22px!important;
+  width:100%!important;
+  min-height:108px!important;
+  margin:0!important;
+  padding:20px 24px!important;
+  background:#ffffff!important;
+  border:1px solid #d9e2ec!important;
+  border-left:7px solid #0f766e!important;
+  border-radius:18px!important;
+  box-shadow:0 8px 22px rgba(16,42,67,.09)!important;
+  transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease!important;
 }
 
 .tarjeta-personal:hover{
-  border-color:#9fcfc7;
-  box-shadow:0 14px 32px rgba(16,42,67,.14);
-  transform:translateY(-2px);
+  transform:translateY(-2px)!important;
+  border-color:#9fcfc7!important;
+  box-shadow:0 13px 30px rgba(16,42,67,.14)!important;
 }
 
 .numero-personal{
-  display:grid;
-  place-items:center;
-  width:56px;
-  height:56px;
-  color:#ffffff;
-  background:linear-gradient(135deg,#0b3550 0%,#0f4f57 52%,#0f766e 100%);
-  border-radius:18px;
-  font-size:.95rem;
-  font-weight:900;
-  letter-spacing:.04em;
+  display:grid!important;
+  place-items:center!important;
+  width:54px!important;
+  height:54px!important;
+  margin:0!important;
+  color:#ffffff!important;
+  background:linear-gradient(135deg,#0b3550 0%,#0f4f57 52%,#0f766e 100%)!important;
+  border-radius:15px!important;
+  font-size:.95rem!important;
+  font-weight:900!important;
+  letter-spacing:.04em!important;
 }
 
 .tarjeta-personal h3{
-  margin:0;
-  color:#0b3550;
-  font-size:1.16rem;
-  font-weight:900;
-  line-height:1.35;
+  margin:0!important;
+  color:#0b3550!important;
+  font-size:1.14rem!important;
+  font-weight:900!important;
+  line-height:1.35!important;
 }
 
 .tarjeta-personal p{
-  margin:0;
-  color:#486581;
-  font-size:.97rem;
-  line-height:1.5;
+  margin:0!important;
+  color:#486581!important;
+  font-size:.96rem!important;
+  line-height:1.48!important;
 }
 
 .tarjeta-personal p strong{
-  display:block;
-  margin-bottom:4px;
-  color:#102a43;
-  font-size:.8rem;
-  font-weight:900;
-  letter-spacing:.08em;
-  text-transform:uppercase;
+  display:block!important;
+  margin:0 0 5px!important;
+  color:#102a43!important;
+  font-size:.76rem!important;
+  font-weight:900!important;
+  letter-spacing:.08em!important;
+  text-transform:uppercase!important;
 }
 
 .tarjeta-personal p br{
-  display:none;
+  display:none!important;
 }
 
 .tarjeta-personal a{
-  color:#0f766e;
-  font-weight:800;
-  overflow-wrap:anywhere;
-  text-decoration:underline;
-  text-underline-offset:3px;
-}
-
-.tarjeta-personal a:hover{
-  color:#0b3550;
+  color:#0f766e!important;
+  font-weight:800!important;
+  overflow-wrap:anywhere!important;
+  text-decoration:underline!important;
+  text-underline-offset:3px!important;
 }
 
 .nota-directorio{
-  margin-top:28px;
+  margin-top:28px!important;
+  padding:18px 20px!important;
+  background:#e6f4f1!important;
+  border-left:6px solid #0f766e!important;
+  border-radius:18px!important;
 }
 
-@media(max-width:920px){
+@media(max-width:960px){
   .tarjeta-personal{
-    grid-template-columns:64px minmax(190px,1fr) minmax(190px,1fr);
+    grid-template-columns:64px minmax(210px,1fr) minmax(210px,1fr)!important;
   }
 
   .tarjeta-personal p:last-child{
-    grid-column:2 / -1;
+    grid-column:2 / -1!important;
   }
 }
 
-@media(max-width:640px){
+@media(max-width:680px){
   .grid-directorio{
-    gap:14px;
-    margin-top:24px;
+    gap:13px!important;
+    margin-top:24px!important;
   }
 
   .tarjeta-personal{
-    grid-template-columns:58px minmax(0,1fr);
-    align-items:start;
-    gap:12px 16px;
-    padding:20px 18px;
-    border-left-width:5px;
-    border-radius:20px;
+    grid-template-columns:56px minmax(0,1fr)!important;
+    align-items:start!important;
+    gap:11px 15px!important;
+    min-height:0!important;
+    padding:18px 16px!important;
+    border-left-width:5px!important;
+    border-radius:17px!important;
   }
 
   .numero-personal{
-    grid-row:1 / span 3;
-    width:50px;
-    height:50px;
-    border-radius:16px;
+    grid-row:1 / span 3!important;
+    width:48px!important;
+    height:48px!important;
+    border-radius:14px!important;
   }
 
   .tarjeta-personal h3,
   .tarjeta-personal p,
   .tarjeta-personal p:last-child{
-    grid-column:2;
+    grid-column:2!important;
   }
 
   .tarjeta-personal h3{
-    font-size:1.08rem;
+    font-size:1.05rem!important;
   }
 
   .tarjeta-personal p{
-    font-size:.94rem;
+    font-size:.93rem!important;
   }
 }
 
-@media(max-width:420px){
+@media(max-width:430px){
   .tarjeta-personal{
-    grid-template-columns:1fr;
+    grid-template-columns:1fr!important;
   }
 
   .numero-personal,
   .tarjeta-personal h3,
   .tarjeta-personal p,
   .tarjeta-personal p:last-child{
-    grid-column:1;
+    grid-column:1!important;
   }
 
   .numero-personal{
-    grid-row:auto;
+    grid-row:auto!important;
   }
 }
