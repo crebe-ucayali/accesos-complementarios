@@ -74,6 +74,88 @@
   color:#b91c1c;
 }
 
+/* Encabezado institucional unificado con los demás accesos */
+.cabecera{
+  padding-top:30px;
+}
+
+.navegacion{
+  min-height:58px;
+  justify-content:flex-end;
+}
+
+.navegacion .marca{
+  display:none;
+}
+
+.enlaces-superiores{
+  margin-left:auto;
+  justify-content:flex-end;
+}
+
+.enlaces-superiores .enlace-cabecera:first-child{
+  order:2;
+}
+
+.enlaces-superiores .enlace-cabecera:last-child{
+  order:1;
+}
+
+.portada{
+  position:relative;
+  margin-top:68px;
+}
+
+.bloque-institucional{
+  position:absolute;
+  top:-126px;
+  left:0;
+  display:inline-flex;
+  align-items:center;
+  gap:14px;
+  max-width:min(620px,calc(100vw - 390px));
+  margin:0;
+}
+
+.bloque-institucional .logo-crebe{
+  width:58px;
+  height:58px;
+  flex:0 0 58px;
+  padding:4px;
+}
+
+.bloque-institucional .texto-institucional{
+  padding-left:14px;
+  border-left:2px solid rgba(255,255,255,.35);
+  text-shadow:0 2px 4px rgba(0,0,0,.28);
+}
+
+.bloque-institucional .texto-institucional::before{
+  display:block;
+  margin:0 0 3px;
+  color:#c9f7ee;
+  font-size:.76rem;
+  font-weight:900;
+  line-height:1.15;
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  content:"Accesos Complementarios";
+}
+
+.bloque-institucional .nombre-institucional{
+  color:#fff;
+  font-size:1.02rem;
+  line-height:1.2;
+}
+
+.bloque-institucional .detalle-institucional{
+  margin-top:4px;
+  color:rgba(255,255,255,.94);
+  font-size:.88rem;
+  font-weight:750;
+  line-height:1.25;
+}
+
 @media (max-width:900px){
   .grid-meses .mes{
     overflow-x:auto;
@@ -85,6 +167,26 @@
 
   .calendario-actividades{
     min-width:700px;
+  }
+
+  .navegacion{
+    align-items:flex-start;
+    min-height:auto;
+    flex-direction:column;
+  }
+
+  .enlaces-superiores{
+    justify-content:flex-start;
+  }
+
+  .portada{
+    margin-top:54px;
+  }
+
+  .bloque-institucional{
+    position:static;
+    max-width:100%;
+    margin:0 0 30px;
   }
 }
 
@@ -104,5 +206,33 @@
 
   .calendario-actividades{
     min-width:700px;
+  }
+
+  .enlaces-superiores{
+    display:grid;
+    width:100%;
+    grid-template-columns:1fr;
+  }
+
+  .enlaces-superiores .enlace-cabecera{
+    width:100%;
+  }
+
+  .bloque-institucional{
+    align-items:flex-start;
+  }
+
+  .bloque-institucional .logo-crebe{
+    width:54px;
+    height:54px;
+    flex-basis:54px;
+  }
+
+  .bloque-institucional .nombre-institucional{
+    font-size:.96rem;
+  }
+
+  .bloque-institucional .detalle-institucional{
+    font-size:.82rem;
   }
 }
