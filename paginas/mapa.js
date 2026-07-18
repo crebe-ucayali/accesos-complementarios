@@ -1,15 +1,21 @@
 (function(){
   const grupos = Array.from(document.querySelectorAll('[data-mapa-grupo]'));
 
+  function obtenerElementos(grupo){
+    const boton = grupo.querySelector('.mapa-cabecera .mapa-desplegar');
+    const panel = grupo.querySelector(':scope > .mapa-contenido');
+    return { boton, panel };
+  }
+
   function establecerEstado(boton, panel, abierto){
     boton.setAttribute('aria-expanded', abierto ? 'true' : 'false');
     panel.hidden = !abierto;
     panel.classList.toggle('esta-abierto', abierto);
+    boton.textContent = abierto ? 'Ocultar accesos' : 'Ver accesos';
   }
 
   grupos.forEach((grupo) => {
-    const boton = grupo.querySelector(':scope > .mapa-cabecera > .mapa-desplegar');
-    const panel = grupo.querySelector(':scope > .mapa-contenido');
+    const { boton, panel } = obtenerElementos(grupo);
     if(!boton || !panel) return;
 
     establecerEstado(boton, panel, false);
@@ -41,9 +47,9 @@
 
   document.addEventListener('keydown', (evento) => {
     if(evento.key !== 'Escape') return;
+
     grupos.forEach((grupo) => {
-      const boton = grupo.querySelector(':scope > .mapa-cabecera > .mapa-desplegar');
-      const panel = grupo.querySelector(':scope > .mapa-contenido');
+      const { boton, panel } = obtenerElementos(grupo);
       if(boton && panel) establecerEstado(boton, panel, false);
     });
   });
