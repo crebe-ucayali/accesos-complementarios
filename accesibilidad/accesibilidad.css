@@ -1,4 +1,4 @@
-/* Herramienta común de accesibilidad para EVA / Accesos Complementarios. */
+/* Herramienta común de accesibilidad para EVA. */
 
 :root{
   --eva-accesibilidad-fondo:#07324a;
@@ -7,9 +7,7 @@
   --eva-accesibilidad-activo:#0f766e;
 }
 
-/* Identidad visual común para todas las cabeceras de AC.
-   Se usa un pseudo-elemento para que también funcione en Galería y Calendario,
-   aunque esas páginas no tengan el elemento .patron-portada en el HTML. */
+/* Identidad visual común para las cabeceras de Accesos Complementarios. */
 .cabecera{
   position:relative !important;
   overflow:hidden !important;
@@ -29,10 +27,7 @@
   filter:saturate(1.15) contrast(1.08) !important;
 }
 
-/* Evita que se duplique el patrón en páginas que ya tenían este contenedor. */
-.patron-portada{
-  display:none !important;
-}
+.patron-portada{display:none !important;}
 
 .cabecera .navegacion,
 .cabecera .portada,
@@ -40,6 +35,38 @@
   position:relative !important;
   z-index:1 !important;
 }
+
+.eva-solo-lectores{
+  position:absolute !important;
+  width:1px !important;
+  height:1px !important;
+  padding:0 !important;
+  margin:-1px !important;
+  overflow:hidden !important;
+  clip:rect(0,0,0,0) !important;
+  white-space:nowrap !important;
+  border:0 !important;
+}
+
+.eva-salto-contenido{
+  position:fixed;
+  top:10px;
+  left:10px;
+  z-index:10001;
+  padding:12px 16px;
+  border:3px solid #0f766e;
+  border-radius:10px;
+  color:#082f49;
+  background:#ffffff;
+  font-family:Arial,Helvetica,sans-serif;
+  font-weight:900;
+  text-decoration:none;
+  box-shadow:0 8px 24px rgba(0,0,0,.22);
+  transform:translateY(-170%);
+  transition:transform .18s ease;
+}
+
+.eva-salto-contenido:focus{transform:translateY(0);}
 
 .eva-accesibilidad-panel{
   position:fixed;
@@ -61,22 +88,20 @@
   color:var(--eva-accesibilidad-texto);
   background:var(--eva-accesibilidad-fondo);
   box-shadow:0 12px 28px rgba(0,0,0,.22);
+  font:inherit;
   font-size:1rem;
   font-weight:900;
+  line-height:1.2;
   cursor:pointer;
-}
-
-.eva-accesibilidad-boton:focus,
-.eva-accesibilidad-opcion:focus{
-  outline:3px solid #facc15;
-  outline-offset:3px;
 }
 
 .eva-accesibilidad-menu{
   position:absolute;
   right:0;
   bottom:68px;
-  width:min(290px,calc(100vw - 36px));
+  width:min(330px,calc(100vw - 36px));
+  max-height:min(680px,calc(100vh - 110px));
+  overflow:auto;
   padding:16px;
   border:1px solid #d9e2ec;
   border-radius:20px;
@@ -85,101 +110,179 @@
   box-shadow:0 18px 42px rgba(16,42,67,.22);
 }
 
-.eva-accesibilidad-menu[hidden]{display:none!important;}
-.eva-accesibilidad-titulo{margin:0 0 10px;color:#07324a;font-size:1rem;font-weight:900;}
-.eva-accesibilidad-descripcion{margin:0 0 14px;color:#486581;font-size:.92rem;line-height:1.45;}
-.eva-accesibilidad-opciones{display:grid;gap:10px;}
+.eva-accesibilidad-menu[hidden]{display:none !important;}
+.eva-accesibilidad-titulo{margin:0 0 8px;color:#07324a;font-size:1.08rem;font-weight:900;line-height:1.3;}
+.eva-accesibilidad-descripcion{margin:0 0 14px;color:#486581;font-size:.92rem;line-height:1.5;}
+.eva-accesibilidad-opciones{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;}
 
 .eva-accesibilidad-opcion{
   display:flex;
   align-items:center;
-  justify-content:space-between;
-  gap:10px;
-  min-height:44px;
-  padding:9px 12px;
-  border:1px solid #d9e2ec;
-  border-radius:14px;
+  justify-content:center;
+  min-height:46px;
+  padding:9px 10px;
+  border:2px solid #d9e2ec;
+  border-radius:12px;
   color:#07324a;
   background:#f8fafc;
   font:inherit;
-  font-weight:800;
+  font-size:.85rem;
+  font-weight:850;
+  line-height:1.25;
+  text-align:center;
   cursor:pointer;
 }
 
-.eva-accesibilidad-opcion[aria-pressed="true"]{
-  color:#ffffff;
-  background:var(--eva-accesibilidad-activo);
-  border-color:var(--eva-accesibilidad-activo);
-}
+.eva-accesibilidad-opcion:hover{border-color:#0f766e;background:#e6f4f1;}
+.eva-accesibilidad-opcion[aria-pressed="true"]{color:#ffffff;background:var(--eva-accesibilidad-activo);border-color:var(--eva-accesibilidad-activo);}
+.eva-accesibilidad-opcion:disabled{opacity:.55;cursor:not-allowed;}
+.eva-accesibilidad-restablecer{grid-column:1/-1;margin-top:4px;}
 
-.eva-accesibilidad-restablecer{margin-top:12px;width:100%;justify-content:center;}
+:where(a,button,input,select,textarea,[tabindex]):focus-visible{
+  outline:4px solid #f59e0b !important;
+  outline-offset:3px !important;
+}
 
 html.eva-texto-grande{font-size:112.5%;}
 html.eva-texto-muy-grande{font-size:125%;}
 
-html.eva-alto-contraste,
-html.eva-alto-contraste body{
-  color:#ffffff!important;
-  background:#000000!important;
+html.eva-fuente-legible,
+html.eva-fuente-legible body,
+html.eva-fuente-legible body *:not(code):not(pre):not(kbd):not(samp):not(.signo-braille):not(.braille-char):not(.braille-cell){
+  font-family:Verdana,Tahoma,Arial,sans-serif !important;
 }
 
-html.eva-alto-contraste a,
-html.eva-alto-contraste button{color:#ffff00!important;}
+html.eva-fuente-legible body{letter-spacing:.012em;word-spacing:.025em;}
+html.eva-fuente-legible p,
+html.eva-fuente-legible li,
+html.eva-fuente-legible label,
+html.eva-fuente-legible input,
+html.eva-fuente-legible textarea,
+html.eva-fuente-legible select{line-height:1.7;}
+html.eva-fuente-legible h1,
+html.eva-fuente-legible h2,
+html.eva-fuente-legible h3,
+html.eva-fuente-legible h4{letter-spacing:0 !important;line-height:1.22;}
+
+html.eva-espaciado-amplio body{letter-spacing:.035em;word-spacing:.11em;line-height:1.82;}
+html.eva-espaciado-amplio p,
+html.eva-espaciado-amplio li,
+html.eva-espaciado-amplio span,
+html.eva-espaciado-amplio a,
+html.eva-espaciado-amplio button,
+html.eva-espaciado-amplio label{line-height:1.75;}
+
+html.eva-enlaces-resaltados a:not(.marca):not(.tarjeta):not(.tarjeta-acceso){
+  text-decoration:underline !important;
+  text-decoration-thickness:2px !important;
+  text-underline-offset:3px !important;
+}
+
+html.eva-enlaces-resaltados .tarjeta,
+html.eva-enlaces-resaltados .tarjeta-acceso{
+  outline:2px solid currentColor;
+  outline-offset:2px;
+}
+
+html.eva-escala-grises{filter:grayscale(1);}
+
+html.eva-reducir-movimiento *,
+html.eva-reducir-movimiento *::before,
+html.eva-reducir-movimiento *::after{
+  animation-duration:.01ms !important;
+  animation-iteration-count:1 !important;
+  transition-duration:.01ms !important;
+  scroll-behavior:auto !important;
+}
+
+html.eva-alto-contraste,
+html.eva-alto-contraste body{
+  color:#ffffff !important;
+  background:#000000 !important;
+}
+
+html.eva-alto-contraste body *{
+  text-shadow:none !important;
+  box-shadow:none !important;
+}
 
 html.eva-alto-contraste header,
 html.eva-alto-contraste main,
 html.eva-alto-contraste section,
 html.eva-alto-contraste article,
+html.eva-alto-contraste aside,
 html.eva-alto-contraste footer,
+html.eva-alto-contraste nav,
 html.eva-alto-contraste .panel,
 html.eva-alto-contraste .panel-accesos,
+html.eva-alto-contraste .tarjeta,
 html.eva-alto-contraste .tarjeta-acceso,
-html.eva-alto-contraste .nota-inferior{
-  color:#ffffff!important;
-  background:#000000!important;
-  border-color:#ffffff!important;
-  box-shadow:none!important;
+html.eva-alto-contraste .nota-inferior,
+html.eva-alto-contraste .card,
+html.eva-alto-contraste .modal-content{
+  color:#ffffff !important;
+  background:#000000 !important;
+  border-color:#ffffff !important;
 }
 
 html.eva-alto-contraste h1,
 html.eva-alto-contraste h2,
 html.eva-alto-contraste h3,
+html.eva-alto-contraste h4,
 html.eva-alto-contraste p,
 html.eva-alto-contraste li,
 html.eva-alto-contraste span,
 html.eva-alto-contraste label,
-html.eva-alto-contraste strong{
-  color:#ffffff!important;
-  text-shadow:none!important;
-  opacity:1!important;
-}
+html.eva-alto-contraste strong,
+html.eva-alto-contraste small{color:#ffffff !important;opacity:1 !important;}
+
+html.eva-alto-contraste a,
+html.eva-alto-contraste button{color:#ffff00 !important;border-color:#ffffff !important;}
 
 html.eva-alto-contraste input,
 html.eva-alto-contraste select,
 html.eva-alto-contraste textarea{
-  color:#ffffff!important;
-  background:#000000!important;
-  border-color:#ffffff!important;
+  color:#ffffff !important;
+  background:#000000 !important;
+  border-color:#ffffff !important;
 }
 
-html.eva-alto-contraste .eva-accesibilidad-panel,
+html.eva-alto-contraste img,
+html.eva-alto-contraste video{outline:2px solid #ffffff;}
+
 html.eva-alto-contraste .eva-accesibilidad-menu,
-html.eva-alto-contraste .eva-accesibilidad-menu *,
-html.eva-alto-contraste .eva-accesibilidad-opcion{
-  color:#07324a!important;
-  background:#ffffff!important;
+html.eva-alto-contraste .eva-accesibilidad-menu *{
+  color:#07324a !important;
+  background:#ffffff !important;
+  box-shadow:none !important;
 }
 
 html.eva-alto-contraste .eva-accesibilidad-boton,
 html.eva-alto-contraste .eva-accesibilidad-opcion[aria-pressed="true"]{
-  color:#ffff00!important;
-  background:#07324a!important;
-  border-color:#ffff00!important;
+  color:#ffff00 !important;
+  background:#07324a !important;
+  border-color:#ffff00 !important;
+}
+
+html.eva-alto-contraste .eva-accesibilidad-opcion:not([aria-pressed="true"]){border-color:#07324a !important;}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
 }
 
 @media(max-width:700px){
   .cabecera::before{background-size:260px auto !important;}
   .eva-accesibilidad-panel{right:12px;bottom:12px;}
-  .eva-accesibilidad-boton{min-width:52px;min-height:52px;padding:10px 14px;}
+  .eva-accesibilidad-boton{min-width:52px;min-height:52px;padding:10px 14px;font-size:.9rem;}
   .eva-accesibilidad-menu{bottom:62px;}
+}
+
+@media(max-width:430px){
+  .eva-accesibilidad-opciones{grid-template-columns:1fr;}
+  .eva-accesibilidad-restablecer{grid-column:auto;}
 }
